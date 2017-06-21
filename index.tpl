@@ -30,10 +30,11 @@
 		</ul>
 	{/if}
 	<div class="tab-content">{$HOOK_HOME_TAB_CONTENT}<h1>{$meta_title}</h1>
-    {if $cart_qties > 5}
+    {assign var="count" value= 5 - $cart_qties}
+    {if $cart_qties >= 5}
         <h2>{l s="Congratulations, you benefit of a free shipping because you have more than 5 articles on your cart !"}</h2>
     {else}
-    <h2>{l s="You can benefit of a free shipping if you buy 5 articles or more"}</h2>
+    <h2>{l s="You can benefit of a free shipping if you buy at least %d more articles" sprintf=$count}</h2>
     {/if}
     </div>
     {l s='Hello World'}
