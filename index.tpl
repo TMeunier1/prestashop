@@ -29,7 +29,13 @@
 			{$HOOK_HOME_TAB}
 		</ul>
 	{/if}
-	<div class="tab-content">{$HOOK_HOME_TAB_CONTENT}<h1>{$meta_title}</h1></div>
+	<div class="tab-content">{$HOOK_HOME_TAB_CONTENT}<h1>{$meta_title}</h1>
+    {if $cart_qties > 5}
+        <h2>{l s="Congratulations, you benefit of a free shipping because you have more than 5 articles on your cart !"}</h2>
+    {else}
+    <h2>{l s="You can benefit of a free shipping if you buy 5 articles or more"}</h2>
+    {/if}
+    </div>
     {l s='Hello World'}
     {l|truncate s="This is a text who have about 10-20 characters, maybe more now I don't know I didn't count, but it seems to be way more than 10-20 characters, 100 maybe ? Who knows, I'll ask Iandry to count the numbers of characters, that way I'll know."}
 {/if}
